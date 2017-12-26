@@ -1,0 +1,190 @@
+.text {
+    word-wrap:break-word;
+}
+.div_pre::before {
+    content: '';
+    background: rgba(255, 0, 0, .5);
+}
+.div_pre {
+    border-radius: 5px;
+    background-color: #F5F5F5;
+    //box-shadow: 3px 3px 3px #888888;
+    -webkit-box-shadow: 0px 0px 5px #888888;
+    padding: 10px 20px 10px 20px;
+}
+.div_li li {
+    color: #090C66;
+}
+.text h2 {
+    color: #0BBF8D;
+}
+h1 {
+    color: #ED3E1D;
+}
+.text h2 {
+    margin-top: 50px;
+    margin-bottom: 5px;
+}
+.text ul {
+    padding-left: 20px;
+    counter-reset: li;
+    position: relative;
+}
+.text ul::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top:-1px;
+    height: 100%;
+    width: 3px;
+    line-height: 2em;
+    background-color: #FF9D89;
+    color: black;
+    text-align: center;
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 0px 5px #FF9D89;
+}
+.text ul li::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: #F5F5F5;
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 0px 5px #EDEDED;
+    z-index: -1;
+}
+.text ul li:hover::after {
+    background-color: #DEDEDE;
+    -webkit-filter: blur(5px); /* Chrome, Opera */
+    -moz-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+}
+.text ul li {
+    margin-top: 5px;
+    padding: 4px 0px 4px 35px;
+    list-style: none;
+    position: relative;
+    border-radius: 15px;
+    //background: #EDEDED;
+    //-webkit-box-shadow: 3px 1px 2px gray;
+}
+.text ul li:hover {
+    font-weight: 900;
+    color: black;
+}
+.text ul li::before {
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    left: 1px;
+    top:-1px;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    background-color: #FF9D89;
+    color: black;
+    text-align: center;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 0px 1px #FF9D89;
+    text-shadow:0px 0px 1px gray;
+}
+.text .ul_1 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    list-style: none;
+}
+.text ul li a {
+    margin-top: 5px;
+    padding: 4px 100px 4px 8px;
+    border-radius: 10px;
+    background: #EDEDED;
+    width: 100%;
+    color: #454545;
+}
+.text ul li a:hover {
+    padding: 4px 98px 4px 10px;
+    background: #F0F0F0;
+    color: black;
+}
+.text pre {
+//white-space: pre-wrap;
+    background-color: #FCFCFC;
+    overflow:auto;
+    border: 1px solid #B0B0B0;
+//word-wrap: break-word;
+}
+.text img {
+    //width: 100%;
+    //width: 700px;
+    max-width: 100%;
+}
+.text .div_img {                                            // img外层会包裹一层div来做css效果
+    border: 1px solid gray;
+    position: relative;
+    margin: 30px 10px 30px 10px;
+    max-width: 100%;
+}
+.text .div_img::before {
+    content: "";
+    position: absolute;
+    left:-20px;
+    top:-20px;
+    height: 100%;
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+    margin: 10px 10px 20px 10px;
+    z-index: -1;
+    border: 1px solid gray;
+    border-radius: 5px;
+    backgounrd-color: gray;
+}
+.text h2 {
+    position: relative;
+    margin-bottom: 25px;
+    margin-top: 50px;
+}
+.text h2::after {
+    content: "";
+    position: absolute;
+    left: -1%;
+    top: -12px;
+    width: 102%;
+    height: 115%;
+    margin: 10px 0px 10px 0px;
+    -webkit-box-shadow: 2px 2px 5px gray;
+    background-color: white;
+    z-index: -1;
+    opacity: 0.7;
+}
+pre ol {
+    counter-reset: li;
+}
+pre ol li {
+    list-style: none;
+    position: relative;
+    padding-left: 10px;
+}
+pre ol li::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 5px;
+    background-color: gray;
+}
+pre ol li::before {
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    top: 0;
+    left: -30px;
+    height: 100%;
+    width: 20px;
+    font-weight: 600;
+    color: gray;
+}
